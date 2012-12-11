@@ -52,8 +52,8 @@
 
   // load the next "script" and invoke callback when done
   function loadScript(currentScript, yieldDone){
-    var id   = currentScript.data('id');
-    var file = currentScript.data('file');
+    var id   = currentScript.data('gistId');
+    var file = currentScript.data('gistFile');
     var path = generatePath(id, file);
     LOG && console.log("loadScript() id =" + id + ", file = " + file + "  path=" + path);
 
@@ -128,7 +128,7 @@
   function initGist(){
     LOG && console.log("initGist()")
     $('.gistLoad').each(function(index){
-      LOG && console.log("Adding -" + $(this).data("id") + "- to scripts array")
+      LOG && console.log("Adding -" + $(this).data("gitsId") + "- to scripts array")
       scripts.push($(this))
     });
     loadScripts(); // safely callable multiple times

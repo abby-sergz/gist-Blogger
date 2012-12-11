@@ -8,9 +8,13 @@ At the end of each of your blog posts, include the following code using the HTML
 
 Now to include any gist template just add the following anywhere in your blog post.
 
-	<div class="gistLoad" data-id="GistID" id="gist-GistID">Loading ....</div>
+	<div class="gistLoad" data-gist-id="GistID" id="gist-GistID">Loading ....</div>
 
-Replace "GistID" with your gist id.
+or
+
+	<div class="gistLoad" data-gist-id="GistID" data-gist-file="GistFile" id="gist-GistID">Loading ....</div>
+
+Replace "GistID" with your gist id and "GistFile" with name of file inside this gist.
 
 
 
